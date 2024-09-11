@@ -216,9 +216,79 @@ Answer the following question:
 
 3. What concentrations of critical elements (including rare earth elements) would be considered economic to extract from coal?
 
-You might try the Report on Rare Earth Elements from Coal and Coal Byproducts (@usde2017) to start with.
+The booming demand for critical element, has not merely driven interest in alternative sources beyond traditional mining but also stimulate the exploration of operational feasibility from an economic value perspective. Economic  assessment is hinged with the priority concern on concentrations, as well as demand-supply dynamic and operational cost @usde2017.
 
-Also try @Seredin2012; @Dai2016; @Qin2015b; @SUN2014.
+In general, @Seredin2012 study for the coal mining in Far east region, Russia manifest the cut-off  criterion for REE extraction will range from 800-1000 ppm, subject to seam thickness of the coal. However, the primitive cut-off grading does not correct reflect market trend on each individual composition. The new outlook coefficient(Table 3) is introduced to lever the economic degree of rarity for REY oxide(REO). Elements with plentiful deposits or relatively narrow application markets will be graded as 'Excessive', vice versa to be graded as 'Vital'. The ratio formula can be written as:
+
+$$ \tag{1} C_{Outlook}=\frac{\sum{C_{Vital}}}{\sum{C_{Excessive}}}  $$
+$$ \tag{2} C_{\text{Critical percent}}=\frac{\sum{C_{Vital}}}{\sum{C_{REE}}} $$
+
+```{r table3}
+table3<-tibble("REE"= c("Scandium(Sc)","Yttrium(Y)", "Lanthanum (La)", "Cerium (Ce)", "Praseodymium (Pr)", "Neodymium (Nd)", "Promethium (Pm)", "Samarium (Sm)", "Europium (Eu)", "Gadolinium (Gd)", "Terbium (Tb)", "Dysprosium (Dy)", "Holmium (Ho)", "Erbium (Er)", "Thulium (Tm)", "Ytterbium (Yb)", "Lutetium (Lu)"),
+   "Category"= c("-", "M", "L","L","L","L","-","L","M","M","M","M","H","H","H","H","H"),
+   "Significance"=c("-","Vital","Moderate","Excessive","Moderate","Vital",
+                    "-", "Moderate","Vital","Moderate","Vital","Vital","Excessive","Vital","Excessive","Excessive","Excessive")
+   )
+
+table3 |>gt()|>
+  cols_align(align = "center" ) |>  
+  gt_theme_538() |> tab_footnote(
+    footnote = "L- Light; M- Middle; H- Heavy",
+    locations = cells_column_labels(columns = Category)
+  )|> 
+    tab_footnote(
+    footnote = md("Not included due to heterogeneous and radioactive reason."),
+    locations = cells_body(
+      columns =Significance,
+      rows=Significance =="-"
+    )
+  ) |>  tab_source_note(
+    source_note = md(
+      "Source: Seredin et al., 2012"
+    )
+  ) |>
+  tab_header(title = "Table 3: summary of crtical element in Australia") |>
+  cols_width(everything() ~ px(100))|>
+  tab_options(
+    table.font.size = px(10)# Adjust the font size
+  )
+```
+
+
+@Ketris2009 research measured average trace REE concentration globally at 403.5 ppm, with an approximately 1 outlook coefficient and 35% $C_{\text{Critical percent}}$. Continual research by @Choudhary2022 analyzed approximately 288 coal,fly ash samples, reporting 11 of 13 nations has been detected above-average case, especially  notably enrichment in China, Russia and Central Asia.
+
+
+Furthermore, @DaiFinkelman2018 also compiled the cut-off grade(Table 4) for key elements in coal.
+
+```{r table4}
+table4<-tibble("Element"= c("Uranium(U)","Germanium(Ge)*","Vanadium(V)*","Scandium(Sc)*","Selenium(Se)", "Niobium(Nb)", "Zirconium(Zr)*","Molybdenum(Mo)","Rhenium(Re)","Tungsten(W)*","Antimony(Sb)","Beryllium(Be)"),
+"Cut-off grade"= c(1000,300,1000,100,"500-800", 300,2000,1000,1,1000,100,300)
+   )
+
+hd_ree<- table4|> 
+  filter(Element %in% c("Germanium(Ge)*","Vanadium(V)*","Scandium(Sc)*","Zirconium(Zr)*",
+                       "Tungsten(W)*" ))|> pull(Element)
+
+table4 |>gt()|>
+  cols_align(align = "center" ) |>  
+  gt_theme_538() |>
+    tab_footnote(
+    footnote = md("High-demand critical element"),
+    locations = cells_body(
+      columns =Element,
+      rows= Element ==hd_ree
+    )
+  )  |>  tab_source_note(
+    source_note = md(
+      "Source: Dai et al., 2018"
+    )
+  ) |>
+  tab_header(title = "Table 4: summary of crtical element in Australia") |>
+  cols_width(everything() ~ px(100))|>
+  tab_options(
+    table.font.size = px(10)# Adjust the font size
+  )
+```
 
 
 
