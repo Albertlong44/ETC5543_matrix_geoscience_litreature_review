@@ -50,31 +50,76 @@ output:
     citation_package: natbib
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval =TRUE, warning = FALSE, message=FALSE)
 
-**Instructional** 
-
-*Delete this section after you have fully prepared this document*
-
-In your answers to the questions in this literature review please use high quality references (e.g peer reviewed Journal). References can be added to the "mybibfile.bib" within the literature review folder. For example see below a paragraph citing a reference.
-
-"The Fort Cooper Coal Measures and associated stone bands (e.g., tuffaceous clays) have previously been identified as having potential to contain elevated concentrations of rare earth elements (REE) and other ‘strategic’ elements of economic importance [@Hodgkinson2020; @Hodgkinson2021]."
-
-Please note that I have added a considerable number of potentially relevant references to the .bib file; so check the bib file before adding a new reference.
-
-
-
+library(gt)
+library(tidyverse)
+library(gtExtras)
+```
 
 # Critical elements overview
 
 Answer the following question: 
 
+
 1. What are critical elements (also referred to as critical minerals including rare earth elements)? What are they used for and what is their projected demand?
 
-In your answer, in addition to global references and demand, also try to focus on their importance within Australia (there has been a lot of press and recently announced funding for exploration). 
+As the burgeoning ideology of environmental sustainability and geopolitical tension, The concept of critical elements received paramount attentions in the contemporary global landscape. Critical elements, or also referred as critical minerals, is vital  metallic or non-metallic element that underpin the functionality and advancement of core technologies, economic frameworks, and national security but may be susceptible for exogenous risk in supply chain. 
 
-You can use [Geoscience Australia](https://www.ga.gov.au/scientific-topics/minerals/critical-minerals) to get a broad overview, but I expect that you will provide 'proper' peer reviewed Journal articles in your answer.
+According to [Critical Minerals Strategy 2023–2030](https://www.industry.gov.au/publications/critical-minerals-strategy-2023-2030) issued by  @geoscience2023,There has total 15 elements are listed as top vulnerability for the future (Table 1, @Coyne2023 & @Skirrow2013 ):
 
-Consider using a table to summarize the results; for example listing the Element, its uses and demand, and source of citation in a table format.
+
+           
+```{r table1 }
+table1<-tibble("Critical element"=c("Aluminum & derivative(Al)","Cobalt(Co)","Gallium(Ga)","Germanium(Ge)",
+                            "Lithium(Li)","Magnesium(Mg)","Manganese(Mn)", "Nickel(Ni)","Rare-earth elements(REE)", "Silicon(Si)", "Tantalum(Ta)", "Titanium(Ti)","Tungsten(W)","Vanadium(V)","Zirconium(Zr)"),
+               "Production(Kt)"=c(20,5.9,"-","-",61,2.6,3.3,150,18,0.05,0.057,0.85,"-","-",0.5),
+               "% of Global production" =c("14%","3%","-","-","47%","10%","17%","4.5%","6%","1%","3%","8.4%","-","-","36%"),
+    "Ore reserve(Kt)"=c("1,160",613,"-","-","4,563"," Not available","120,000",20.4,"3,121","-",49.8,"82,100",213,"2,948","29,200"),
+  "Usage"=c("Aerospace sector and coating in Li-ion batteries","Li-ion battery cathodes,superalloys, steel, and magnets","ICs, GaN laser diodes and photovoltaics films","Fiber/infared optics,Polymerization Catalysts and semiconductors","Li-ion batteries and Lithium carbonate and lithium oxide in glass or ceramics","Pyrotechnics, medicine and nanocomposites in automotive/aerospace","Steel,Agricultral fertiliser and dry cell batteries", "Non-ferrous alloys,magnets and electroplating","Catalyst,magnets and polishing","Silicon wafer in electronic & photovoltaic cells and synthetic polymers", "Micro-capacitors and medical technology", "Aerospace and marine application or pigment through Titanium dioxide","Lightning and chemical compunds","Steel alloys","Cladding fuel rods in nuclear reactors")
+    
+    )
+                                           
+REE<- table1 |> filter(`Critical element`=="Rare-earth elements(REE)")|>
+  pull(`Critical element`)
+
+table1 |>gt()|> cols_align(
+    align = "center" ) |>  
+  gt_theme_538() |>
+  tab_source_note(
+    source_note = md(
+      "Source: Skirrow et al., 2013 & Coyne and Campbell, 2023"
+    )
+  ) |>  tab_footnote(
+    footnote = md("17 elements, including lanthanoid,Scandium(Sc) and Yttrium(Y)."),
+    locations = cells_body(
+      columns = `Critical element`,
+      rows=`Critical element`== REE
+    )
+  ) |> 
+    tab_footnote(
+    footnote = md("data collected in 2012."),
+    locations = cells_body(
+      columns = names(table1)[4],
+      rows=`Ore reserve(Kt)`==20.4
+    )
+  ) |>
+  tab_header(title = "Table 1: summary of crtical element in Australia") |>
+  cols_width(everything() ~ px(100))|>
+  tab_options(
+    table.font.size = px(10)# Adjust the font size
+  )
+
+```
+
+
+
+Rare-earth elements,a significant branch in critical element, comprise of 15 element in lanthanoid family and 2 extra elements with similar chemical properties--Scandium(Sc) and Yttrium(Y). Unlike name implication, albeit their overall natural abundance(NA) in earth crust is not extremely rare (average 180-200 ppm) their distribution in earth is quite scattered and strong  propensity to coexist in pairs or group within ore deposits in terms of geochemical properties. Therefore, only few REE can be concentrated to a degree that permits for commercial mining. The largest segment of global consumption is catalyst(24%) in automotive or petrochemical industry, as well as  equally high demand(23%) in magnet(NdFeB, SmCo etc.) @Zhou2017.
+
+With the exuberant demand shock from EVs and clean energy exploration, the consumption of critical minerals is foreseeable to be thrived: Geoscience Australia estimates that by 2040, critical elements related to lithium batteries (such as Li, Co, and Ni) will see an exponential surge of 20 to 40 times, while REEs (rare earth elements) will see a 7-fold increase during the same period.
+
+
 
 
 # Critical elements in coal
