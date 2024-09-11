@@ -1,0 +1,119 @@
+---
+title: Literature Review on Critical Elements in Coal
+author:
+  - name: Kane Maxwell
+    email: kane.maxwell@matrixgeoscience.com
+    affiliation: Matrix Geoscience
+    correspondingauthor: true
+  - name: Yuhao Long
+    email: ylon0012@student.monash.edu
+    affiliation: Monash University
+  - name: Evan Ginting
+    email: egin0003@student.monash.edu
+    affiliation: Monash University
+address:
+  - code: Matrix Geoscience
+    organization: Matrix Geoscience
+  - code: Monash University
+    organization: Monash University Masters of Buisness Analytics
+
+abstract: |
+  This paper summarises the literature on critical elements contained in coal. Specifically the paper adresses the following questions: 
+  
+  1) What are critical elements, what are they used for and what is their projected demand?
+  
+  2) What types of critical elements are found in coal, and in what concentrations?
+  
+  3) What concentrations of critical elements would be considered economic to extract?
+  
+  4) Are there any existing coal mines, or coal basins that are extracting critical elements from coal, or coal tailings?
+  
+  5) What analytical and processing methods can be used to extract critical elements from coal?
+  
+  
+keywords: 
+  - Coal
+  - Critical Elements
+  - Rare Earth Elements
+journal: "International Journal of Coal Geology"
+date: "`r Sys.Date()`"
+linenumbers: false
+numbersections: true
+bibliography: mybibfile.bib
+biblio-style: elsarticle-harv # author year style for natbib - use 'elsarticle-num' or 'elsarticle-num-names' for numbered scheme
+classoption: preprint, 3p, authoryear # remove authoryear is not using `elsarticle-harv`
+# Use a CSL with `citation_package = "default"`
+# csl: https://www.zotero.org/styles/elsevier-harvard
+output: 
+  rticles::elsevier_article:
+    keep_tex: true
+    citation_package: natbib
+---
+
+
+**Instructional** 
+
+*Delete this section after you have fully prepared this document*
+
+In your answers to the questions in this literature review please use high quality references (e.g peer reviewed Journal). References can be added to the "mybibfile.bib" within the literature review folder. For example see below a paragraph citing a reference.
+
+"The Fort Cooper Coal Measures and associated stone bands (e.g., tuffaceous clays) have previously been identified as having potential to contain elevated concentrations of rare earth elements (REE) and other ‘strategic’ elements of economic importance [@Hodgkinson2020; @Hodgkinson2021]."
+
+Please note that I have added a considerable number of potentially relevant references to the .bib file; so check the bib file before adding a new reference.
+
+
+
+
+# Critical elements overview
+
+Answer the following question: 
+
+1. What are critical elements (also referred to as critical minerals including rare earth elements)? What are they used for and what is their projected demand?
+
+In your answer, in addition to global references and demand, also try to focus on their importance within Australia (there has been a lot of press and recently announced funding for exploration). 
+
+You can use [Geoscience Australia](https://www.ga.gov.au/scientific-topics/minerals/critical-minerals) to get a broad overview, but I expect that you will provide 'proper' peer reviewed Journal articles in your answer.
+
+Consider using a table to summarize the results; for example listing the Element, its uses and demand, and source of citation in a table format.
+
+
+# Critical elements in coal
+
+Answer the following question: 
+
+2. What types of critical elements are found in coal, and in what concentrations?
+
+For good background info relevant to Australia please start with the ACARP report (C29030) by @Hodgkinson2021. Also, in our data analysis we will be focusing on determining PAAS values - make sure you know what this means and how to calculate this - it is fully explained in  @Hodgkinson2021.
+
+
+# Economic concentrations
+
+Answer the following question: 
+
+3. What concentrations of critical elements (including rare earth elements) would be considered economic to extract from coal?
+
+You might try the Report on Rare Earth Elements from Coal and Coal Byproducts (@usde2017) to start with.
+
+Also try @Seredin2012; @Dai2016; @Qin2015b; @SUN2014.
+
+
+
+# Existing economic deposits
+
+Answer the following question: 
+
+4. Are there any existing coal mines, or coal basins that are extracting critical elements from coal, or coal tailings?
+
+Try @Qin2015b to start with. Also try @Sun2010 and @Qin2015
+
+# Extraction of critical elements
+
+Answer the following question: 
+
+5. What analytical and processing methods can be used to extract critical elements from coal?
+
+Try @Eterigho2021 for REE extraction example. Also look at @Qin2015 and Qin2015b 
+
+
+# References {-}
+
