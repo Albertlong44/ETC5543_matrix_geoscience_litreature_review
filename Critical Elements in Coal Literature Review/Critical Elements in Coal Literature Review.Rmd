@@ -298,7 +298,8 @@ Answer the following question:
 
 4. Are there any existing coal mines, or coal basins that are extracting critical elements from coal, or coal tailings?
 
-Try @Qin2015b to start with. Also try @Sun2010 and @Qin2015
+The extraction of critical elements from coal mines is still in the observation and exploration stage. Industrial-grade  REE and lithium deposits have been respectively probed in the Jungar basin in Inner Mongolia and the Ningwu basin in Shanxi Province, China. @sun2010  study on the Antaibao surface coalfield(Ningwu basin) found  Lithium  enrichment with 10 times higher than China WAV  in roof rock, floor rock and coal seams. Another independent anlysis  @Dai2012 of mineralogical and geochemical compositions in 
+Daqingshan coalfield(Jungar basin) exhibits L-type or H-type of REY ,Ga  and $Al_{2}O_3$ abnormalities in coal bench, widely distributed in chlorite,kaolinite and goyazite.
 
 # Extraction of critical elements
 
