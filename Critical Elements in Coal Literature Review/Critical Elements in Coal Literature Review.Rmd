@@ -307,7 +307,35 @@ Answer the following question:
 
 5. What analytical and processing methods can be used to extract critical elements from coal?
 
-Try @Eterigho2021 for REE extraction example. Also look at @Qin2015 and Qin2015b 
+The   analytic methods in critical element mapping and quantification can be summarized as @Eterigho2021:
+
+1). **Proximate analysis**: As the standard practice of ASTM D3172, it incorporates the composition breakdown through  the learning of moisture,volatile matter, ash and carbon content attribute.
+
+2). **X-Ray Fluorescence (XRF) analysis**: As the standard practice of ASTM D4326-13, it incorporate spectrometric identification and quantification of the concentration of the critical element.
+
+3). **Inductively Coupled Plasma Atomic Emission Spectrometry (ICP-AES)**:As the standard practice of ASTM D 6357–19,it is particularly utilized to determine the occurrence and concentration for trace elements e.g. arsenic, cadmium, mercury, lead, and other potentially hazardous or valuable elements.
+
+4). **Laser-induced breakdown spectroscopy (LIBS)**:A short pulse laser is focused on the sample surface to form a plasma, and then the plasma emission spectrum is analyzed to determine the material composition and content of the sample.
+
+5). **Transmission Electron Microscopy(TEM)**: It is a is an advanced diagnostic technique used to observe material structures at the nanometer scale. With transmitting a beam of electrons through an ultra-thin specimen, it can return an  image  that reveals its internal structure and pattern.
+
+6).  **Intelligent Scanning Electron Microscopy (SEM)**: Similar to TEM, SEM is a computer-controlled  scanning for coal and ores's surface morphology and topography that reveal the texture, grain structure, and other attribute in the sample.
+
+7).  **Chemical fractionation**: It refers to the process of seperating mixture of mineral matters into
+different phrase, which can help to target isolating elements or compounds.
+
+
+The traditional techniques of element extraction primarily focus on 
+
+1). **acid-alkine** reagent to dissolve impurities in compound mineral matters. Although this approach can achieve 70%-80% recover rate, recently it has been controversial due to the excessive waste of acid and alkaline solvents and the production of hazardous pollutants.
+
+2). **Biological leaching** is another relatively environment-beneficial approach that allow extraction under mild reacting conditions and high operating safety.However, it encountered the bottleneck of  strain cultivation and microbial control,  incurring the scale-up challenge to industrial-level production. 
+
+
+Recently, **water-leaching** is a prevailing  approach since it mitigate the flaw from traditional techniques. Water leaching can be considered as  less environmentally detrimental compared to strong acid/alkaline leaching, as well as cost effective for solvent selection. The  crucial stages on this preparation workflow  are **low temperature activation** and **water leaching**.  During the stage of low temperature activation, the chemical reaction within coal fly ash(CFA) will be facilitated by complexation agents(ammonium salts or weak acids) in covered alumina crucibles, which  help liberate critical elements from the matrix of the CFA. After the activation and cool down to ambient temperature, the tablets are placed in water for the leaching and dissolve process. Water acts as the leaching solvent, extracting these soluble elements into the leachate.The configuration in temperature and mass ratio of solvent will be the vital determinant for optimized recovery. Take Lithium  example, it can achieve a stable leaching efficiency of 90% through ammonium fluoride leaching at 150°C with a $SiO_2/NH_4F$ mass ratio of 1:1.35 @Xu2021. 
+
+Another innovation is Hydrophobic-Hydrophilic Separation (HHS), designed to leverages the disparity  of affinity( water-repellent &water-friendly) properties of substances to achieve separation.It can treat as a complemetary application for small particle delamination without size limit, providing flexible and extensible purpose in the segregation of ultrafine coal @Hodgkinson2021.
+ 
 
 
 # References {-}
