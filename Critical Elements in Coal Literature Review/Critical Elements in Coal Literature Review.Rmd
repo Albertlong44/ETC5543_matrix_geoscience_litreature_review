@@ -127,8 +127,87 @@ With the exuberant demand shock from EVs and clean energy exploration, the consu
 Answer the following question: 
 
 2. What types of critical elements are found in coal, and in what concentrations?
+ In an ideal state, any chemical elements can be detected in coal deposit, which may originate from syn-genetic plant decays or epigenetic source after . Its concentration will be determined on coalified compaction and the heat & pressure environment.
 
-For good background info relevant to Australia please start with the ACARP report (C29030) by @Hodgkinson2021. Also, in our data analysis we will be focusing on determining PAAS values - make sure you know what this means and how to calculate this - it is fully explained in  @Hodgkinson2021.
+
+
+In @Hodgkinson2020 element mapping  project on Bowen basin,the largest coal reserves in Australia, the concentration of element  composition is subjective to sample's lithology rather than the depth grading:
+
+
+1). In coal and derivative,  albeit majority of element concentrations is inferior of the benchmark against earth crust average, local  samples exhibit  enrichment in HREE and Scandium in respect to @McLennan2011 Post-Archaean Australian Shales (PAAS) standard , while abnormal 4-6 times higher than crustal average in moderate  critical element, Bismuth(Bi) .
+
+2). Siltstone and mudstone has a lackluster finding to classify enrichment for majority of elements concentration,except for  the concentration of Cobalt compound barely meet crustal average,  whose ubiquitous economic value may warrant further examination.
+
+3).  As the sediment from volcanic ash, tuffaceous rock is rich in pumice and lithic fragments. The sample display a series of  elevated concentrations of  strategic elements including REE, Ga and Bi. Besides, a potential Lithium-rich borehole is found, with approximate 5 times higher than crustal average.
+
+Below is the summary result (Table 2) from  the distribution of critical element :
+
+
+```{r table2}
+table2_c<-tibble("Critical element"=c("Lithium","REE","Cobalt","Nickel","Tantalum","Vanadium","Zirconium","Gallium","Bismuth"),
+       "Crust"=c(21,184,17,47,1,97, 193,17,0.2),
+       "Average concentration(ppm)"= c(13.7,115.8,16.9,11.2,0.33,85.6,102.1,12.3,0.59),
+       "Higest concentration(ppm)"=c(25,205,30,40,1,140,160,25,1),
+                                     
+       "% of above crustal average"=c(2/9,1/9,4/9,0,1/3,2/9,0,4/9,2/3),
+       "Type"=rep("Coal& associate",9)
+       )
+
+
+
+table2_sm<-tibble(
+  "Critical element"=c("Lithium","REE","Cobalt","Nickel","Tantalum","Vanadium","Zirconium","Gallium","Bismuth"),
+       "Crust"=c(21,184,17,47,1,97,193, 17,0.2),
+  "Average concentration(ppm)"= c(17.2,138.8,39.3,25.8,0.2,102,116.8,15,0.18),
+       "Higest concentration(ppm)"=c(28,189,134,73,1,225,243,22,0.4),
+                                     
+       "% of above crustal average"=c(1/3,1/6,2/3,1/3,1/6,1/3,1/6,1/3,2/3),
+       "Type"=rep("Siltstone & mudstone",9)
+)
+
+
+table2_tf<-tibble(
+  "Critical element"=c("Lithium","REE","Cobalt","Nickel","Tantalum","Vanadium","Zirconium","Gallium","Bismuth"),
+       "Crust"=c(21,184,17,47,1,97,193, 17,0.2),
+  "Average concentration(ppm)"= c(21.5,244,9.25,3.75,1.1,27.9,153.75,32.25,0.71),
+       "Higest concentration(ppm)"=c(105,441,19,30,2,70,282,37,1.2),
+                                     
+       "% of above crustal average"=c(1/8,7/8,1/8,0,1,0,1/4,1,1),
+       "Type"=rep("Tuffaceous rocks",9)
+)
+
+table2_bind<-rbind(table2_c,table2_sm,table2_tf)
+table2_bind |> 
+  group_by(Type) |>
+  gt()|>  
+  gt_theme_538() |>
+  cols_align(align = "center" )|> 
+  fmt_percent("% of above crustal average",
+                                decimals=2) |> 
+  tab_header(title = "Table 2: summary of Hodginkson et al., 2021  sampling mapping result  for Bowen basin's sample")|>
+   tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(
+      columns = "Average concentration(ppm)",
+      rows=`Average concentration(ppm)`>= Crust
+    )
+  )|>
+  tab_source_note(
+    source_note = md(
+      "Source: Hodginkson et al., 2020"
+    )
+  )  |> tab_footnote(
+    footnote = " McLennan 2011  Post-Archean
+Australian Shale standard ",
+    locations = cells_column_labels(columns = Crust)
+  )|>
+  tab_header(title = "Table 2: summary of crtical element in Australia") |>
+  cols_width(everything() ~ px(100))|>
+  tab_options(
+    table.font.size = px(10)# Adjust the font size
+  )
+
+```
 
 
 # Economic concentrations
