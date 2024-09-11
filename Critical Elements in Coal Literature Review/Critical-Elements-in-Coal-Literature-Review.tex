@@ -6,15 +6,14 @@ authoryear]{elsarticle} %review=doublespace preprint=single 5p=2 column
 
   \journal{International Journal of Coal Geology} % Sets Journal name
 
+\usepackage{lineno} % add
+
 \usepackage{graphicx}
 %%%%%%%%%%%%%%%% end my additions to header
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
-% TODO: Currently lineno needs to be loaded after amsmath because of conflict
-% https://github.com/latex-lineno/lineno/issues/5
-\usepackage{lineno} % add
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 % use upquote if available, for straight quotes in verbatim environments
@@ -60,7 +59,13 @@ authoryear]{elsarticle} %review=doublespace preprint=single 5p=2 column
 
 
 
-
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{anyfontsize}
+\usepackage{multirow}
 
 
 
@@ -82,10 +87,8 @@ authoryear]{elsarticle} %review=doublespace preprint=single 5p=2 column
   %
   }
    \ead{egin0003@student.monash.edu} 
-      \affiliation[Matrix Geoscience]{
-    organization={Matrix Geoscience},}
-    \affiliation[Monash University]{
-    organization={Monash University Masters of Buisness Analytics},}
+      \affiliation[Matrix Geoscience]{}
+    \affiliation[Monash University]{}
     \cortext[cor1]{Corresponding author}
   
   \begin{abstract}
@@ -118,25 +121,6 @@ authoryear]{elsarticle} %review=doublespace preprint=single 5p=2 column
   
  \end{frontmatter}
 
-\textbf{Instructional}
-
-\emph{Delete this section after you have fully prepared this document}
-
-In your answers to the questions in this literature review please use
-high quality references (e.g peer reviewed Journal). References can be
-added to the ``mybibfile.bib'' within the literature review folder. For
-example see below a paragraph citing a reference.
-
-``The Fort Cooper Coal Measures and associated stone bands (e.g.,
-tuffaceous clays) have previously been identified as having potential to
-contain elevated concentrations of rare earth elements (REE) and other
-`strategic' elements of economic importance
-\citep{Hodgkinson2020, Hodgkinson2021}.''
-
-Please note that I have added a considerable number of potentially
-relevant references to the .bib file; so check the bib file before
-adding a new reference.
-
 \hypertarget{critical-elements-overview}{%
 \section{Critical elements overview}\label{critical-elements-overview}}
 
@@ -151,17 +135,72 @@ Answer the following question:
   their projected demand?
 \end{enumerate}
 
-In your answer, in addition to global references and demand, also try to
-focus on their importance within Australia (there has been a lot of
-press and recently announced funding for exploration).
+As the burgeoning ideology of environmental sustainability and
+geopolitical tension, The concept of critical elements received
+paramount attentions in the contemporary global landscape. Critical
+elements, or also referred as critical minerals, is vital metallic or
+non-metallic element that underpin the functionality and advancement of
+core technologies, economic frameworks, and national security but may be
+susceptible for exogenous risk in supply chain.
 
-You can use
-\href{https://www.ga.gov.au/scientific-topics/minerals/critical-minerals}{Geoscience
-Australia} to get a broad overview, but I expect that you will provide
-`proper' peer reviewed Journal articles in your answer.
+According to
+\href{https://www.industry.gov.au/publications/critical-minerals-strategy-2023-2030}{Critical
+Minerals Strategy 2023--2030} issued by \citet{geoscience2023},There has
+total 15 elements are listed as top vulnerability for the future (Table
+1, \citet{Coyne2023} \& \citet{Skirrow2013} ):
 
-Consider using a table to summarize the results; for example listing the
-Element, its uses and demand, and source of citation in a table format.
+\begingroup
+\fontsize{7.5pt}{9.0pt}\selectfont
+\setlength{\LTpost}{0mm}
+\begin{longtable}{>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}}
+\caption*{
+{\large Table 1: summary of crtical element in Australia}
+} \\ 
+\toprule
+{CRITICAL ELEMENT} & {PRODUCTION(KT)} & \% of Global production & {ORE RESERVE(KT)} & {USAGE} \\ 
+\midrule\addlinespace[2.5pt]
+Aluminum \& derivative(Al) & 20 & 14\% & 1,160 & Aerospace sector and coating in Li-ion batteries \\ 
+Cobalt(Co) & 5.9 & 3\% & 613 & Li-ion battery cathodes,superalloys, steel, and magnets \\ 
+Gallium(Ga) & - & - & - & ICs, GaN laser diodes and photovoltaics films \\ 
+Germanium(Ge) & - & - & - & Fiber/infared optics,Polymerization Catalysts and semiconductors \\ 
+Lithium(Li) & 61 & 47\% & 4,563 & Li-ion batteries and Lithium carbonate and lithium oxide in glass or ceramics \\ 
+Magnesium(Mg) & 2.6 & 10\% &  Not available & Pyrotechnics, medicine and nanocomposites in automotive/aerospace \\ 
+Manganese(Mn) & 3.3 & 17\% & 120,000 & Steel,Agricultral fertiliser and dry cell batteries \\ 
+Nickel(Ni) & 150 & 4.5\% & 20.4\textsuperscript{\textit{1}} & Non-ferrous alloys,magnets and electroplating \\ 
+Rare-earth elements(REE)\textsuperscript{\textit{2}} & 18 & 6\% & 3,121 & Catalyst,magnets and polishing \\ 
+Silicon(Si) & 0.05 & 1\% & - & Silicon wafer in electronic \& photovoltaic cells and synthetic polymers \\ 
+Tantalum(Ta) & 0.057 & 3\% & 49.8 & Micro-capacitors and medical technology \\ 
+Titanium(Ti) & 0.85 & 8.4\% & 82,100 & Aerospace and marine application or pigment through Titanium dioxide \\ 
+Tungsten(W) & - & - & 213 & Lightning and chemical compunds \\ 
+Vanadium(V) & - & - & 2,948 & Steel alloys \\ 
+Zirconium(Zr) & 0.5 & 36\% & 29,200 & Cladding fuel rods in nuclear reactors \\ 
+\bottomrule
+\end{longtable}
+\begin{minipage}{\linewidth}
+\textsuperscript{\textit{1}}data collected in 2012.\\
+\textsuperscript{\textit{2}}17 elements, including lanthanoid,Scandium(Sc) and Yttrium(Y).\\
+Source: Skirrow et al., 2013 \& Coyne and Campbell, 2023\\
+\end{minipage}
+\endgroup
+
+Rare-earth elements,a significant branch in critical element, comprise
+of 15 element in lanthanoid family and 2 extra elements with similar
+chemical properties--Scandium(Sc) and Yttrium(Y). Unlike name
+implication, albeit their overall natural abundance(NA) in earth crust
+is not extremely rare (average 180-200 ppm) their distribution in earth
+is quite scattered and strong propensity to coexist in pairs or group
+within ore deposits in terms of geochemical properties. Therefore, only
+few REE can be concentrated to a degree that permits for commercial
+mining. The largest segment of global consumption is catalyst(24\%) in
+automotive or petrochemical industry, as well as equally high
+demand(23\%) in magnet(NdFeB, SmCo etc.) \citet{Zhou2017}.
+
+With the exuberant demand shock from EVs and clean energy exploration,
+the consumption of critical minerals is foreseeable to be thrived:
+Geoscience Australia estimates that by 2040, critical elements related
+to lithium batteries (such as Li, Co, and Ni) will see an exponential
+surge of 20 to 40 times, while REEs (rare earth elements) will see a
+7-fold increase during the same period.
 
 \hypertarget{critical-elements-in-coal}{%
 \section{Critical elements in coal}\label{critical-elements-in-coal}}
@@ -174,14 +213,92 @@ Answer the following question:
 \tightlist
 \item
   What types of critical elements are found in coal, and in what
-  concentrations?
+  concentrations? In an ideal state, any chemical elements can be
+  detected in coal deposit, which may originate from syn-genetic plant
+  decays or epigenetic source after . Its concentration will be
+  determined on coalified compaction and the heat \& pressure
+  environment.
 \end{enumerate}
 
-For good background info relevant to Australia please start with the
-ACARP report (C29030) by \citet{Hodgkinson2021}. Also, in our data
-analysis we will be focusing on determining PAAS values - make sure you
-know what this means and how to calculate this - it is fully explained
-in \citet{Hodgkinson2021}.
+In \citet{Hodgkinson2020} element mapping project on Bowen basin,the
+largest coal reserves in Australia, the concentration of element
+composition is subjective to sample's lithology rather than the depth
+grading:
+
+1). In coal and derivative, albeit majority of element concentrations is
+inferior of the benchmark against earth crust average, local samples
+exhibit enrichment in HREE and Scandium in respect to
+\citet{McLennan2011} Post-Archaean Australian Shales (PAAS) standard ,
+while abnormal 4-6 times higher than crustal average in moderate
+critical element, Bismuth(Bi) .
+
+2). Siltstone and mudstone has a lackluster finding to classify
+enrichment for majority of elements concentration,except for the
+concentration of Cobalt compound barely meet crustal average, whose
+ubiquitous economic value may warrant further examination.
+
+3). As the sediment from volcanic ash, tuffaceous rock is rich in pumice
+and lithic fragments. The sample display a series of elevated
+concentrations of strategic elements including REE, Ga and Bi. Besides,
+a potential Lithium-rich borehole is found, with approximate 5 times
+higher than crustal average.
+
+Below is the summary result (Table 2) from the distribution of critical
+element :
+
+\begingroup
+\fontsize{7.5pt}{9.0pt}\selectfont
+\setlength{\LTpost}{0mm}
+\begin{longtable}{>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}}
+\caption*{
+{\large Table 2: summary of crtical element in Australia}
+} \\ 
+\toprule
+{CRITICAL ELEMENT} & Crust\textsuperscript{\textit{1}} & {AVERAGE CONCENTRATION(PPM)} & {HIGEST CONCENTRATION(PPM)} & \% of above crustal average \\ 
+\midrule\addlinespace[2.5pt]
+\multicolumn{5}{>{\raggedright\arraybackslash}m{450pt}}{{Coal\& associate}} \\[2.5pt] 
+\midrule\addlinespace[2.5pt]
+Lithium & 21.0 & 13.70 & 25.0 & 22.22\% \\ 
+REE & 184.0 & 115.80 & 205.0 & 11.11\% \\ 
+Cobalt & 17.0 & 16.90 & 30.0 & 44.44\% \\ 
+Nickel & 47.0 & 11.20 & 40.0 & 0.00\% \\ 
+Tantalum & 1.0 & 0.33 & 1.0 & 33.33\% \\ 
+Vanadium & 97.0 & 85.60 & 140.0 & 22.22\% \\ 
+Zirconium & 193.0 & 102.10 & 160.0 & 0.00\% \\ 
+Gallium & 17.0 & 12.30 & 25.0 & 44.44\% \\ 
+Bismuth & 0.2 & {\bfseries 0.59} & 1.0 & 66.67\% \\ 
+\midrule\addlinespace[2.5pt]
+\multicolumn{5}{>{\raggedright\arraybackslash}m{450pt}}{{Siltstone \& mudstone}} \\[2.5pt] 
+\midrule\addlinespace[2.5pt]
+Lithium & 21.0 & 17.20 & 28.0 & 33.33\% \\ 
+REE & 184.0 & 138.80 & 189.0 & 16.67\% \\ 
+Cobalt & 17.0 & {\bfseries 39.30} & 134.0 & 66.67\% \\ 
+Nickel & 47.0 & 25.80 & 73.0 & 33.33\% \\ 
+Tantalum & 1.0 & 0.20 & 1.0 & 16.67\% \\ 
+Vanadium & 97.0 & {\bfseries 102.00} & 225.0 & 33.33\% \\ 
+Zirconium & 193.0 & 116.80 & 243.0 & 16.67\% \\ 
+Gallium & 17.0 & 15.00 & 22.0 & 33.33\% \\ 
+Bismuth & 0.2 & 0.18 & 0.4 & 66.67\% \\ 
+\midrule\addlinespace[2.5pt]
+\multicolumn{5}{>{\raggedright\arraybackslash}m{450pt}}{{Tuffaceous rocks}} \\[2.5pt] 
+\midrule\addlinespace[2.5pt]
+Lithium & 21.0 & {\bfseries 21.50} & 105.0 & 12.50\% \\ 
+REE & 184.0 & {\bfseries 244.00} & 441.0 & 87.50\% \\ 
+Cobalt & 17.0 & 9.25 & 19.0 & 12.50\% \\ 
+Nickel & 47.0 & 3.75 & 30.0 & 0.00\% \\ 
+Tantalum & 1.0 & {\bfseries 1.10} & 2.0 & 100.00\% \\ 
+Vanadium & 97.0 & 27.90 & 70.0 & 0.00\% \\ 
+Zirconium & 193.0 & 153.75 & 282.0 & 25.00\% \\ 
+Gallium & 17.0 & {\bfseries 32.25} & 37.0 & 100.00\% \\ 
+Bismuth & 0.2 & {\bfseries 0.71} & 1.2 & 100.00\% \\ 
+\bottomrule
+\end{longtable}
+\begin{minipage}{\linewidth}
+\textsuperscript{\textit{1}} McLennan 2011  Post-Archean
+Australian Shale standard \\
+Source: Hodginkson et al., 2020\\
+\end{minipage}
+\endgroup
 
 \hypertarget{economic-concentrations}{%
 \section{Economic concentrations}\label{economic-concentrations}}
@@ -197,13 +314,101 @@ Answer the following question:
   elements) would be considered economic to extract from coal?
 \end{enumerate}
 
-You might try the Report on Rare Earth Elements from Coal and Coal
-Byproducts (\citet{usde2017}) to start with.
+The booming demand for critical element, has not merely driven interest
+in alternative sources beyond traditional mining but also stimulate the
+exploration of operational feasibility from an economic value
+perspective. Economic assessment is hinged with the priority concern on
+concentrations, as well as demand-supply dynamic and operational cost
+\citet{usde2017}.
 
-Also try \citet{Seredin2012}; \citet{Dai2016}; \citet{Qin2015b};
-\citet{SUN2014}.
+In general, \citet{Seredin2012} study for the coal mining in Far east
+region, Russia manifest the cut-off criterion for REE extraction will
+range from 800-1000 ppm, subject to seam thickness of the coal. However,
+the primitive cut-off grading does not correct reflect market trend on
+each individual composition. The new outlook coefficient(Table 3) is
+introduced to lever the economic degree of rarity for REY oxide(REO).
+Elements with plentiful deposits or relatively narrow application
+markets will be graded as `Excessive', vice versa to be graded as
+`Vital'. The ratio formula can be written as:
 
-\citet{Eterigho2021}
+\[ \tag{1} C_{Outlook}=\frac{\sum{C_{Vital}}}{\sum{C_{Excessive}}}  \]
+\[ \tag{2} C_{\text{Critical percent}}=\frac{\sum{C_{Vital}}}{\sum{C_{REE}}} \]
+
+\begingroup
+\fontsize{7.5pt}{9.0pt}\selectfont
+\setlength{\LTpost}{0mm}
+\begin{longtable}{>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}}
+\caption*{
+{\large Table 3: summary of crtical element in Australia}
+} \\ 
+\toprule
+{REE} & Category\textsuperscript{\textit{1}} & {SIGNIFICANCE} \\ 
+\midrule\addlinespace[2.5pt]
+Scandium(Sc) & - & -\textsuperscript{\textit{2}} \\ 
+Yttrium(Y) & M & Vital \\ 
+Lanthanum (La) & L & Moderate \\ 
+Cerium (Ce) & L & Excessive \\ 
+Praseodymium (Pr) & L & Moderate \\ 
+Neodymium (Nd) & L & Vital \\ 
+Promethium (Pm) & - & -\textsuperscript{\textit{2}} \\ 
+Samarium (Sm) & L & Moderate \\ 
+Europium (Eu) & M & Vital \\ 
+Gadolinium (Gd) & M & Moderate \\ 
+Terbium (Tb) & M & Vital \\ 
+Dysprosium (Dy) & M & Vital \\ 
+Holmium (Ho) & H & Excessive \\ 
+Erbium (Er) & H & Vital \\ 
+Thulium (Tm) & H & Excessive \\ 
+Ytterbium (Yb) & H & Excessive \\ 
+Lutetium (Lu) & H & Excessive \\ 
+\bottomrule
+\end{longtable}
+\begin{minipage}{\linewidth}
+\textsuperscript{\textit{1}}L- Light; M- Middle; H- Heavy\\
+\textsuperscript{\textit{2}}Not included due to heterogeneous and radioactive reason.\\
+Source: Seredin et al., 2012\\
+\end{minipage}
+\endgroup
+
+\citet{Ketris2009} research measured average trace REE concentration
+globally at 403.5 ppm, with an approximately 1 outlook coefficient and
+35\% \(C_{\text{Critical percent}}\). Continual research by
+\citet{Choudhary2022} analyzed approximately 288 coal,fly ash samples,
+reporting 11 of 13 nations has been detected above-average case,
+especially notably enrichment in China, Russia and Central Asia.
+
+Furthermore, \citet{DaiFinkelman2018} also compiled the cut-off
+grade(Table 4) for key elements in coal.
+
+\begingroup
+\fontsize{7.5pt}{9.0pt}\selectfont
+\setlength{\LTpost}{0mm}
+\begin{longtable}{>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}>{\centering\arraybackslash}p{\dimexpr 75.00pt -2\tabcolsep-1.5\arrayrulewidth}}
+\caption*{
+{\large Table 4: summary of crtical element in Australia}
+} \\ 
+\toprule
+{ELEMENT} & {CUT-OFF GRADE} \\ 
+\midrule\addlinespace[2.5pt]
+Uranium(U) & 1000 \\ 
+Germanium(Ge)* & 300 \\ 
+Vanadium(V)* & 1000 \\ 
+Scandium(Sc)* & 100 \\ 
+Selenium(Se) & 500-800 \\ 
+Niobium(Nb) & 300 \\ 
+Zirconium(Zr)* & 2000 \\ 
+Molybdenum(Mo) & 1000 \\ 
+Rhenium(Re) & 1 \\ 
+Tungsten(W)*\textsuperscript{\textit{1}} & 1000 \\ 
+Antimony(Sb) & 100 \\ 
+Beryllium(Be) & 300 \\ 
+\bottomrule
+\end{longtable}
+\begin{minipage}{\linewidth}
+\textsuperscript{\textit{1}}High-demand critical element\\
+Source: Dai et al., 2018\\
+\end{minipage}
+\endgroup
 
 \hypertarget{existing-economic-deposits}{%
 \section{Existing economic deposits}\label{existing-economic-deposits}}
@@ -219,8 +424,17 @@ Answer the following question:
   critical elements from coal, or coal tailings?
 \end{enumerate}
 
-Try \citet{Qin2015b} to start with. Also try \citet{Sun2010} and
-\citet{Qin2015}
+The extraction of critical elements from coal mines is still in the
+observation and exploration stage. Industrial-grade REE and lithium
+deposits have been respectively probed in the Jungar basin in Inner
+Mongolia and the Ningwu basin in Shanxi Province, China. \citet{sun2010}
+study on the Antaibao surface coalfield(Ningwu basin) found Lithium
+enrichment with 10 times higher than China WAV in roof rock, floor rock
+and coal seams. Another independent anlysis \citet{Dai2012} of
+mineralogical and geochemical compositions in Daqingshan
+coalfield(Jungar basin) exhibits L-type or H-type of REY ,Ga and
+\(Al_{2}O_3\) abnormalities in coal bench, widely distributed in
+chlorite,kaolinite and goyazite.
 
 \hypertarget{extraction-of-critical-elements}{%
 \section{Extraction of critical
@@ -237,8 +451,80 @@ Answer the following question:
   elements from coal?
 \end{enumerate}
 
-Try \citet{Eterigho2021} for REE extraction example. Also look at
-\citet{Qin2015} and Qin2015b
+The analytic methods in critical element mapping and quantification can
+be summarized as \citet{Eterigho2021}:
+
+1). \textbf{Proximate analysis}: As the standard practice of ASTM D3172,
+it incorporates the composition breakdown through the learning of
+moisture,volatile matter, ash and carbon content attribute.
+
+2). \textbf{X-Ray Fluorescence (XRF) analysis}: As the standard practice
+of ASTM D4326-13, it incorporate spectrometric identification and
+quantification of the concentration of the critical element.
+
+3). \textbf{Inductively Coupled Plasma Atomic Emission Spectrometry
+(ICP-AES)}:As the standard practice of ASTM D 6357--19,it is
+particularly utilized to determine the occurrence and concentration for
+trace elements e.g.~arsenic, cadmium, mercury, lead, and other
+potentially hazardous or valuable elements.
+
+4). \textbf{Laser-induced breakdown spectroscopy (LIBS)}:A short pulse
+laser is focused on the sample surface to form a plasma, and then the
+plasma emission spectrum is analyzed to determine the material
+composition and content of the sample.
+
+5). \textbf{Transmission Electron Microscopy(TEM)}: It is a is an
+advanced diagnostic technique used to observe material structures at the
+nanometer scale. With transmitting a beam of electrons through an
+ultra-thin specimen, it can return an image that reveals its internal
+structure and pattern.
+
+6). \textbf{Intelligent Scanning Electron Microscopy (SEM)}: Similar to
+TEM, SEM is a computer-controlled scanning for coal and ores's surface
+morphology and topography that reveal the texture, grain structure, and
+other attribute in the sample.
+
+7). \textbf{Chemical fractionation}: It refers to the process of
+seperating mixture of mineral matters into different phrase, which can
+help to target isolating elements or compounds.
+
+The traditional techniques of element extraction primarily focus on
+
+1). \textbf{acid-alkine} reagent to dissolve impurities in compound
+mineral matters. Although this approach can achieve 70\%-80\% recover
+rate, recently it has been controversial due to the excessive waste of
+acid and alkaline solvents and the production of hazardous pollutants.
+
+2). \textbf{Biological leaching} is another relatively
+environment-beneficial approach that allow extraction under mild
+reacting conditions and high operating safety.However, it encountered
+the bottleneck of strain cultivation and microbial control, incurring
+the scale-up challenge to industrial-level production.
+
+Recently, \textbf{water-leaching} is a prevailing approach since it
+mitigate the flaw from traditional techniques. Water leaching can be
+considered as less environmentally detrimental compared to strong
+acid/alkaline leaching, as well as cost effective for solvent selection.
+The crucial stages on this preparation workflow are \textbf{low
+temperature activation} and \textbf{water leaching}. During the stage of
+low temperature activation, the chemical reaction within coal fly
+ash(CFA) will be facilitated by complexation agents(ammonium salts or
+weak acids) in covered alumina crucibles, which help liberate critical
+elements from the matrix of the CFA. After the activation and cool down
+to ambient temperature, the tablets are placed in water for the leaching
+and dissolve process. Water acts as the leaching solvent, extracting
+these soluble elements into the leachate.The configuration in
+temperature and mass ratio of solvent will be the vital determinant for
+optimized recovery. Take Lithium example, it can achieve a stable
+leaching efficiency of 90\% through ammonium fluoride leaching at 150°C
+with a \(SiO_2/NH_4F\) mass ratio of 1:1.35 \citet{Xu2021}.
+
+Another innovation is Hydrophobic-Hydrophilic Separation (HHS), designed
+to leverages the disparity of affinity( water-repellent
+\&water-friendly) properties of substances to achieve separation.It can
+treat as a complemetary application for small particle delamination
+without size limit, providing flexible and extensible purpose in the
+segregation of ultrafine coal \citet{Hodgkinson2021}.
 
 \renewcommand\refname{References}
 \bibliography{mybibfile.bib}
