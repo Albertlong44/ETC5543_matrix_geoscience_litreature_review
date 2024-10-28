@@ -1,5 +1,5 @@
 # The Litreature Review for Element Extraction In Coal Mines
-
+::: {style="text-align: justify;"}
 ## Objective
 As the burgeoning ideology of environmental sustainability and geopolitical tension, The concept of critical elements received paramount attentions in the contemporary global landscape. However, This 
 
