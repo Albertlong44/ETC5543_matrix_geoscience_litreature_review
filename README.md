@@ -1,5 +1,5 @@
 # The Litreature Review for Element Extraction In Coal Mines
-::: {style="text-align: justify;"}
+
 ## Objective
 As the burgeoning ideology of environmental sustainability and geopolitical tension, The concept of critical elements received paramount attentions in the contemporary global landscape. However, This 
 
@@ -28,11 +28,11 @@ To replicate the analysis:
 ## Session information
 This repository is built and managed by Posit Cloud with R version 4.4.2. The prerequsite of the R-package include:
 
-Tidyverse 2.0.0,
+- Tidyverse 2.0.0,
 
-gt 0.11.09000,
+- gt 0.11.09000,
 
-gtExtras 0.5.0
+- gtExtras 0.5.0
 
 
 ## License
